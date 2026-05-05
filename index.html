@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>หน้าแรก - Coffee & Bakery</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Kanit', sans-serif;
+      background-color: #faf6f0;
+      color: #333;
+    }
+    .carousel-item {
+      height: 450px;
+    }
+    .carousel-item img {
+      object-fit: cover;
+      height: 100%;
+      filter: brightness(0.85);
+    }
+    .feature-icon {
+      font-size: 2.5rem;
+      color: #6F4E37;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top shadow-sm" style="background-color: #ffffff; font-family: 'Kanit', sans-serif;">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html" style="color: #6F4E37;">
+        <i class="bi bi-cup-hot-fill me-2 fs-4"></i>
+        <span>Coffee & Bakery</span>
+      </a>
+      
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold px-3" aria-current="page" href="index.html" style="color: #6F4E37;">หน้าแรก</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 text-secondary" href="customer-menu.html">เมนูอาหารและเครื่องดื่ม</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 text-secondary" href="order.html">สั่งซื้อสินค้า</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 text-secondary" href="about.html">เกี่ยวกับเรา</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold px-3" aria-current="page" href="promotion.html" style="color: #6F4E37;">โปรโมชันและกิจกรรม</a>
+          </li>
+        </ul>
+        
+        <form class="d-flex mt-3 mt-lg-0" role="search">
+          <div class="input-group">
+            <input class="form-control border-secondary-subtle shadow-none" type="search" placeholder="ค้นหาเมนู..." aria-label="Search">
+            <button class="btn" type="submit" style="background-color: #6F4E37; color: #ffffff;">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div id="carouselExampleIndicators" class="carousel slide mb-5" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="บรรยากาศคาเฟ่">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="fw-bold shadow-sm">กาแฟสดหอมกรุ่นทุกเช้า</h2>
+          <p>คัดสรรเมล็ดกาแฟคุณภาพพรีเมียมเพื่อคุณ</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="เบเกอรี่แสนอร่อย">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="fw-bold">เบเกอรี่อบสดใหม่จากเตา</h2>
+          <p>ทานคู่กับเครื่องดื่มแก้วโปรดของคุณ</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.apthai.com/images/production/NU8BJy0AKuhOCIzMFmkK7ZaoFb8rg5dMrMxMbz0s.jpg" class="d-block w-100" alt="บรรยากาศผ่อนคลาย">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="fw-bold">มุมพักผ่อนสุดชิล</h2>
+          <p>สถานที่ที่เหมาะสำหรับการทำงานและพบปะเพื่อนฝูง</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="container text-center py-5">
+    <h2 class="fw-bold mb-4" style="color: #6F4E37;">ทำไมต้อง Coffee & Bakery?</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <i class="bi bi-patch-check-fill feature-icon mb-3"></i>
+          <h5 class="fw-bold">คัดสรรวัตถุดิบคุณภาพ</h5>
+          <p class="text-muted">เมล็ดกาแฟออร์แกนิกและวัตถุดิบนำเข้าที่ผ่านการรับรองความสดใหม่</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <i class="bi bi-cup-straw feature-icon mb-3"></i>
+          <h5 class="fw-bold">รสชาติเป็นเอกลักษณ์</h5>
+          <p class="text-muted">สูตรเครื่องดื่มและเบเกอรี่ที่เป็นเอกลักษณ์เฉพาะตัวไม่เหมือนใคร</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded shadow-sm h-100">
+          <i class="bi bi-shop feature-icon mb-3"></i>
+          <h5 class="fw-bold">บรรยากาศแสนอบอุ่น</h5>
+          <p class="text-muted">ร้านตกแต่งสไตล์มินิมอล นั่งสบาย พร้อมมุมถ่ายรูปสวยๆ เพียบ</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center py-4 mt-5" style="background-color: #6F4E37; color: #ffffff;">
+    <div class="container">
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

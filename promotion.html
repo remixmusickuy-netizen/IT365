@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>โปรโมชันและกิจกรรม - Coffee & Bakery</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Kanit', sans-serif;
+      background-color: #faf6f0;
+      color: #333;
+    }
+    .promotion-card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .promotion-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .card-img-top {
+      height: 220px;
+      object-fit: cover;
+    }
+    .custom-badge {
+      background-color: #6F4E37;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top shadow-sm" style="background-color: #ffffff; font-family: 'Kanit', sans-serif;">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html" style="color: #6F4E37;">
+        <i class="bi bi-cup-hot-fill me-2 fs-4"></i>
+        <span>Coffee & Bakery</span>
+      </a>
+      
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link px-3 text-secondary" href="index.html">หน้าแรก</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 text-secondary" href="customer-menu.html">เมนูอาหารและเครื่องดื่ม</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 text-secondary" href="order.html">สั่งซื้อสินค้า</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 text-secondary" href="about.html">เกี่ยวกับเรา</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold px-3" aria-current="page" href="promotion.html" style="color: #6F4E37;">โปรโมชันและกิจกรรม</a>
+          </li>
+        </ul>
+        
+        <form class="d-flex mt-3 mt-lg-0" role="search">
+          <div class="input-group">
+            <input class="form-control border-secondary-subtle shadow-none" type="search" placeholder="ค้นหาเมนู..." aria-label="Search">
+            <button class="btn" type="submit" style="background-color: #6F4E37; color: #ffffff;">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-5 text-center">
+    <h2 class="fw-bold" style="color: #6F4E37;">โปรโมชันและกิจกรรมพิเศษ</h2>
+    <p class="text-muted">อัปเดตข้อเสนอสุดคุ้มและเมนูใหม่ประจำเดือนนี้</p>
+  </div>
+
+  <div class="container mb-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      
+      <div class="col">
+        <div class="card h-100 shadow-sm promotion-card">
+          <img src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="โปรโมชันช่วงเช้า">
+          <div class="card-body">
+            <h5 class="card-title fw-bold" style="color: #6F4E37;">สตรอว์เบอร์รีวาฟเฟิล (Strawberry Waffle)</h5>
+            <p class="card-text text-muted">วาฟเฟิลร้อนๆ ท็อปปิ้งด้วยสตรอว์เบอร์รีสดและวิปครีม ในราคาเริ่มต้นเพียง 99 บาท ระหว่างเวลา 07:00 - 10:00 น.</p>
+            <span class="badge custom-badge mb-3">ลดราคา 15%</span>
+            <a href="order.html" class="btn btn-outline-dark w-100" style="border-color: #6F4E37; color: #6F4E37;">สั่งซื้อสินค้า</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm promotion-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCLaxzMVwITQbdYUaRdm_FOxVlRVrHbVOGfw&s" class="card-img-top" alt="เมนูใหม่">
+          <div class="card-body">
+            <h5 class="card-title fw-bold" style="color: #6F4E37;">มัทฉะลาเต้ (Matcha Latte)</h5>
+            <p class="card-text text-muted">ชาเขียวมัทฉะแท้นำเข้าจากญี่ปุ่น ผสมนมสด หอมหวานกำลังดี</p>
+            <span class="badge bg-success mb-3">เมนูแนะนำประจำเดือน</span>
+            <a href="order.html" class="btn btn-outline-dark w-100" style="border-color: #6F4E37; color: #6F4E37;">สั่งซื้อสินค้า</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm promotion-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfP7xE_JzaS_MfptAAlgjuHDiONtU3nX_vgA&s" class="card-img-top" alt="กิจกรรมสะสมแต้ม">
+          <div class="card-body">
+            <h5 class="card-title fw-bold" style="color: #6F4E37;">สะสมแต้มแลกรับฟรี</h5>
+            <p class="card-text text-muted">ทุกๆ การสั่งซื้อ 50 บาท รับ 1 แต้ม สะสมครบ 10 แต้ม แลกรับเครื่องดื่มฟรี 1 แก้วทันที</p>
+            <span class="badge bg-danger mb-3">สิทธิพิเศษสำหรับสมาชิก</span>
+            <a href="customer-menu.html" class="btn btn-outline-dark w-100" style="border-color: #6F4E37; color: #6F4E37;">ดูเมนูทั้งหมด</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="text-center py-4 mt-5" style="background-color: #6F4E37; color: #ffffff;">
+    <div class="container">
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // ฟังก์ชันคัดลอกโค้ดส่วนลด
+    function copyPromoCode() {
+      const codeText = document.getElementById("promoCode").innerText;
+      navigator.clipboard.writeText(codeText).then(() => {
+        alert("คัดลอกโค้ด " + codeText + " เรียบร้อยแล้ว!");
+      });
+    }
+
+    // ฟังก์ชันตัวนับเวลาถอยหลัง (นับ 2 ชั่วโมง)
+    const countDownDate = new Date().getTime() + (2 * 60 * 60 * 1000); // 2 ชั่วโมงจากเวลาปัจจุบัน
+
+    const x = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdownTimer").innerHTML = 
+        (hours < 10 ? "0" : "") + hours + ":" + 
+        (minutes < 10 ? "0" : "") + minutes + ":" + 
+        (seconds < 10 ? "0" : "") + seconds;
+
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdownTimer").innerHTML = "หมดเวลา";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

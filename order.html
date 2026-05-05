@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สั่งซื้อสินค้า - Coffee & Bakery</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Kanit', sans-serif;
+      background-color: #faf6f0;
+      color: #333;
+    }
+    .order-card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top shadow-sm" style="background-color: #ffffff; font-family: 'Kanit', sans-serif;">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html" style="color: #6F4E37;">
+        <i class="bi bi-cup-hot-fill me-2 fs-4"></i>
+        <span>Coffee & Bakery</span>
+      </a>
+      
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link px-3 text-secondary" href="index.html">หน้าแรก</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 text-secondary" href="customer-menu.html">เมนูอาหารและเครื่องดื่ม</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold px-3" aria-current="page" href="order.html" style="color: #6F4E37;">สั่งซื้อสินค้า</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 text-secondary" href="about.html">เกี่ยวกับเรา</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold px-3" aria-current="page" href="promotion.html" style="color: #6F4E37;">โปรโมชันและกิจกรรม</a>
+          </li>
+        </ul>
+        
+        <form class="d-flex mt-3 mt-lg-0" role="search">
+          <div class="input-group">
+            <input class="form-control border-secondary-subtle shadow-none" type="search" placeholder="ค้นหาเมนู..." aria-label="Search">
+            <button class="btn" type="submit" style="background-color: #6F4E37; color: #ffffff;">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-5 text-center">
+    <h2 class="fw-bold" style="color: #6F4E37;">สั่งซื้อสินค้า</h2>
+    <p class="text-muted">กรอกรายละเอียดเพื่อคำนวณราคาและสั่งซื้อ</p>
+  </div>
+
+  <div class="container mb-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="p-4 shadow-sm order-card">
+          <form id="orderForm">
+            
+            <div class="mb-3">
+              <label for="menuSelect" class="form-label fw-semibold" style="color: #6F4E37;">เลือกเมนูสินค้า</label>
+              <select class="form-select shadow-none" id="menuSelect" required>
+                <option value="" selected disabled>-- กรุณาเลือกเมนู --</option>
+                <option value="65">เอสเปรสโซ่ (Espresso) - 65 ฿</option>
+                <option value="75">คาปูชิโน่ (Cappuccino) - 75 ฿</option>
+                <option value="90">ช็อกโกแลตฟัดจ์ (Chocolate Fudge) - 90 ฿</option>
+                <option value="55">ครัวซองต์เนยสด (Butter Croissant) - 55 ฿</option>
+                <option value="80">มัทฉะลาเต้ (Matcha Latte) - 80 ฿</option>
+                <option value="110">สตรอว์เบอร์รีวาฟเฟิล (Strawberry Waffle) - 110 ฿</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="quantity" class="form-label fw-semibold" style="color: #6F4E37;">จำนวน (แก้ว/ชิ้น)</label>
+              <input type="number" class="form-control shadow-none" id="quantity" min="1" value="1" placeholder="ระบุจำนวน" required>
+            </div>
+
+            <div class="mb-4">
+              <label for="totalPrice" class="form-label fw-semibold" style="color: #6F4E37;">ราคาสุทธิ</label>
+              <div class="input-group">
+                <input type="text" class="form-control bg-light text-center fw-bold fs-4" id="totalPrice" value="0 ฿" readonly style="color: #6F4E37;">
+                <button class="btn btn-outline-secondary" type="button" onclick="calculateTotal()">
+                  <i class="bi bi-calculator"></i> คำนวณ
+                </button>
+              </div>
+            </div>
+
+            <hr class="my-4">
+            <h5 class="fw-semibold mb-3" style="color: #6F4E37;">ข้อมูลการจัดส่ง / รับสินค้า</h5>
+            
+            <div class="mb-3">
+              <label for="customerName" class="form-label">ชื่อ - นามสกุล</label>
+              <input type="text" class="form-control shadow-none" id="customerName" placeholder="เช่น สมชาย ใจดี" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="customerPhone" class="form-label">เบอร์โทรศัพท์</label>
+              <input type="tel" class="form-control shadow-none" id="customerPhone" placeholder="08X-XXX-XXXX" required>
+            </div>
+
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="confirmCheck" required>
+              <label class="form-check-label" for="confirmCheck">ยืนยันข้อมูลถูกต้องและต้องการสั่งซื้อ</label>
+            </div>
+
+            <button type="button" class="btn w-100 mt-3 text-white fw-semibold" style="background-color: #6F4E37;" onclick="prepareOrderSummary()" data-bs-toggle="modal" data-bs-target="#orderModal">
+              ยืนยันการสั่งซื้อ
+            </button>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0" style="background-color: #6F4E37; color: #ffffff;">
+          <h5 class="modal-title fw-bold" id="orderModalLabel">
+            <i class="bi bi-receipt me-2"></i>สรุปรายการสั่งซื้อ
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body py-4">
+          <p class="mb-2"><strong>ชื่อลูกค้า:</strong> <span id="summaryName">-</span></p>
+          <p class="mb-2"><strong>เบอร์โทรศัพท์:</strong> <span id="summaryPhone">-</span></p>
+          <hr>
+          <p class="mb-2"><strong>เมนูที่เลือก:</strong> <span id="summaryMenu">-</span></p>
+          <p class="mb-2"><strong>จำนวน:</strong> <span id="summaryQty">-</span></p>
+          <p class="mb-3"><strong>ราคารวม:</strong> <span id="summaryTotal" class="fs-4 fw-bold" style="color: #6F4E37;">-</span></p>
+          
+          <div class="alert alert-success d-flex align-items-center mb-0" role="alert">
+            <i class="bi bi-check-circle-fill me-2 fs-5"></i>
+            <div>ได้รับออร์เดอร์เรียบร้อยแล้ว เตรียมรับความอร่อยได้เลย!</div>
+          </div>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิดหน้าต่าง</button>
+          <button type="button" class="btn text-white" style="background-color: #6F4E37;" onclick="alert('ระบบบันทึกข้อมูลเรียบร้อยแล้ว'); location.reload();">พิมพ์ใบเสร็จ / บันทึก</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center py-4 mt-5" style="background-color: #6F4E37; color: #ffffff;">
+    <div class="container">
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    function calculateTotal() {
+      const menuSelect = document.getElementById('menuSelect').value;
+      const quantity = document.getElementById('quantity').value;
+      const totalPriceInput = document.getElementById('totalPrice');
+
+      if (!menuSelect) {
+        alert('กรุณาเลือกเมนูก่อนทำการคำนวณ');
+        return;
+      }
+      
+      const pricePerUnit = parseInt(menuSelect);
+      const qty = parseInt(quantity);
+      const total = pricePerUnit * qty;
+
+      if (qty > 0) {
+        totalPriceInput.value = total + ' ฿';
+      } else {
+        totalPriceInput.value = '0 ฿';
+      }
+    }
+
+    function prepareOrderSummary() {
+      // ดึงข้อมูลจากฟอร์ม
+      const menuSelect = document.getElementById('menuSelect');
+      const menuName = menuSelect.options[menuSelect.selectedIndex].text.split(' - ')[0]; // เอาเฉพาะชื่อเมนู
+      const quantity = document.getElementById('quantity').value;
+      const customerName = document.getElementById('customerName').value;
+      const customerPhone = document.getElementById('customerPhone').value;
+      const totalPrice = document.getElementById('totalPrice').value;
+
+      // ใส่ข้อมูลลงใน Modal
+      document.getElementById('summaryName').innerText = customerName || 'ไม่ได้ระบุ';
+      document.getElementById('summaryPhone').innerText = customerPhone || 'ไม่ได้ระบุ';
+      document.getElementById('summaryMenu').innerText = menuName;
+      document.getElementById('summaryQty').innerText = quantity + ' (แก้ว/ชิ้น)';
+      document.getElementById('summaryTotal').innerText = totalPrice;
+    }
+  </script>
+</body>
+</html>

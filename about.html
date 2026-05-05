@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เกี่ยวกับเรา - Coffee & Bakery</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Kanit', sans-serif;
+      background-color: #faf6f0;
+      color: #333;
+    }
+    .about-section {
+      background-color: #ffffff;
+      border-radius: 12px;
+    }
+    .gallery-img {
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .gallery-img:hover {
+      transform: scale(1.03);
+    }
+    .progress {
+      height: 1.25rem;
+      border-radius: 6px;
+    }
+    .progress-bar {
+      background-color: #6F4E37;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top shadow-sm" style="background-color: #ffffff; font-family: 'Kanit', sans-serif;">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html" style="color: #6F4E37;">
+        <i class="bi bi-cup-hot-fill me-2 fs-4"></i>
+        <span>Coffee & Bakery</span>
+      </a>
+      
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link px-3 text-secondary" href="index.html">หน้าแรก</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 text-secondary" href="customer-menu.html">เมนูอาหารและเครื่องดื่ม</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 text-secondary" href="order.html">สั่งซื้อสินค้า</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold px-3" aria-current="page" href="about.html" style="color: #6F4E37;">เกี่ยวกับเรา</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold px-3" aria-current="page" href="promotion.html" style="color: #6F4E37;">โปรโมชันและกิจกรรม</a>
+          </li>
+        </ul>
+        
+        <form class="d-flex mt-3 mt-lg-0" role="search">
+          <div class="input-group">
+            <input class="form-control border-secondary-subtle shadow-none" type="search" placeholder="ค้นหาเมนู..." aria-label="Search">
+            <button class="btn" type="submit" style="background-color: #6F4E37; color: #ffffff;">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-5 text-center">
+    <h2 class="fw-bold" style="color: #6F4E37;">เกี่ยวกับเรา</h2>
+    <p class="text-muted">เรื่องราวความหลงใหลในกาแฟและเบเกอรี่ของเรา</p>
+  </div>
+
+  <div class="container mb-5">
+    <div class="row g-4">
+      
+      <div class="col-md-6">
+        <div class="p-4 h-100 shadow-sm about-section">
+          <h4 class="fw-bold mb-3" style="color: #6F4E37;"><i class="bi bi-shop me-2"></i>ประวัติร้านของเรา</h4>
+          <p class="text-muted">
+            Coffee & Bakery เริ่มต้นจากความหลงใหลในกลิ่นหอมของเมล็ดกาแฟและความสุขที่ได้แบ่งปันเบเกอรี่อบสดใหม่ให้ผู้คน เราเปิดให้บริการตั้งแต่ปี 2020 โดยเน้นการสร้างบรรยากาศที่อบอุ่นเหมือนอยู่บ้าน ให้ทุกคนได้มานั่งพักผ่อน ทำงาน หรือพูดคุยกันอย่างมีความสุข
+          </p>
+          <p class="text-muted">
+            เรามุ่งมั่นที่จะพัฒนาสูตรเครื่องดื่มและขนมใหม่ ๆ เพื่อมอบประสบการณ์ที่ดีที่สุดแก่ลูกค้าทุกท่านอยู่เสมอ
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-4 h-100 shadow-sm about-section">
+          <h4 class="fw-bold mb-3" style="color: #6F4E37;"><i class="bi bi-cup-hot me-2"></i>ที่มาของเมล็ดกาแฟ</h4>
+          <p class="text-muted mb-4">
+            เราคัดสรรเมล็ดกาแฟออร์แกนิกจากแหล่งปลูกชั้นนำทั้งในและต่างประเทศ นำมาผ่านกรรมวิธีการคั่วอย่างพิถีพิถันเพื่อดึงเอกลักษณ์ของกาแฟแต่ละชนิดออกมา
+          </p>
+          
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="fw-semibold small" style="color: #6F4E37;">เมล็ดกาแฟไทย (ดอยช้าง) - คั่วกลาง</span>
+              <span class="text-muted small">80%</span>
+            </div>
+            <div class="progress" role="progressbar" aria-label="Medium Roast" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: 80%"></div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="fw-semibold small" style="color: #6F4E37;">เมล็ดกาแฟโคลอมเบีย - คั่วเข้ม</span>
+              <span class="text-muted small">95%</span>
+            </div>
+            <div class="progress" role="progressbar" aria-label="Dark Roast" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: 95%"></div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="fw-semibold small" style="color: #6F4E37;">เมล็ดกาแฟเอธิโอเปีย - คั่วอ่อน</span>
+              <span class="text-muted small">60%</span>
+            </div>
+            <div class="progress" role="progressbar" aria-label="Light Roast" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: 60%"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container py-4">
+    <h3 class="fw-bold text-center mb-4" style="color: #6F4E37;">บรรยากาศภายในร้าน</h3>
+    <div class="row g-4">
+      
+      <div class="col-md-4">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO59_cbxS417kM0XPcLabHW4FQbPl0DqnB6w&s" class="w-100 shadow-sm gallery-img" alt="มุมที่นั่งภายในร้าน" onclick="showModal('มุมที่นั่งภายในร้าน', 'บรรยากาศมุมโซฟานั่งสบาย เหมาะสำหรับการทำงานและอ่านหนังสือ', 'https://images.unsplash.com/photo-1554118811-1e0d58224d24?auto=format&fit=crop&w=800&q=80')" data-bs-toggle="modal" data-bs-target="#imageModal">
+      </div>
+      <div class="col-md-4">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=500&q=80" class="w-100 shadow-sm gallery-img" alt="เคาน์เตอร์บาร์" onclick="showModal('เคาน์เตอร์บาร์', 'โซนบาร์กาแฟที่คุณสามารถพูดคุยแลกเปลี่ยนเรื่องกาแฟกับบาริสต้าได้', 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80')" data-bs-toggle="modal" data-bs-target="#imageModal">
+      </div>
+      <div class="col-md-4">
+        <img src="https://patreeda.com/wp-content/uploads/2022/05/cover-no-headline-1.jpg" class="w-100 shadow-sm gallery-img" alt="มุมตกแต่งและต้นไม้" onclick="showModal('มุมตกแต่งและต้นไม้', 'มุมยอดฮิตสำหรับการถ่ายภาพ ตกแต่งด้วยต้นไม้สีเขียวให้ความสดชื่น', 'https://images.unsplash.com/photo-1497935586351-b67a4930ed06?auto=format&fit=crop&w=800&q=80')" data-bs-toggle="modal" data-bs-target="#imageModal">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0" style="background-color: #6F4E37; color: #ffffff;">
+          <h5 class="modal-title fw-bold" id="imageModalLabel">รายละเอียดรูปภาพ</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImageSrc" src="" class="img-fluid rounded mb-3 w-100" alt="ภาพขยาย">
+          <h5 id="modalImageTitle" class="fw-bold" style="color: #6F4E37;">-</h5>
+          <p id="modalImageDesc" class="text-muted">-</p>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center py-4 mt-5" style="background-color: #6F4E37; color: #ffffff;">
+    <div class="container">
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function showModal(title, description, imageSrc) {
+      document.getElementById('modalImageTitle').innerText = title;
+      document.getElementById('modalImageDesc').innerText = description;
+      document.getElementById('modalImageSrc').src = imageSrc;
+    }
+  </script>
+</body>
+</html>
